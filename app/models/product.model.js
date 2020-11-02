@@ -5,9 +5,16 @@ module.exports = (sequelize, Sequelize) => {
       primaryKey: true,
       autoIncrement: true
     },
-    name: Sequelize.STRING,
+    name: {
+      type: Sequelize.STRING,
+      allowNull: false
+    },
+    type: {
+      type: Sequelize.ENUM("tipo1", "tipo2", "tipo3"),
+      allowNull: false
+    },
     price: Sequelize.FLOAT(7, 2),
-    type: Sequelize.STRING,
+    description: Sequelize.STRING,
     image: Sequelize.STRING
   });
 

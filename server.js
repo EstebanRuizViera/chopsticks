@@ -5,8 +5,29 @@ const cors = require("cors");
 const app = express();
 
 const db = require("./app/models");
+const Role = db.roles
 
-db.sequelize.sync();
+db.sequelize.sync().then(() => {
+  console.log('Drop and Resync Db');
+  initial();
+});
+
+function initial() {
+  Role.create({
+    id: 1,
+    name: "user"
+  });
+
+  Role.create({
+    id: 2,
+    name: "moderator"
+  });
+
+  Role.create({
+    id: 3,
+    name: "admin"
+  });
+}
 
 var corsOptions = {
   'allowedHeaders': ['sessionId', 'Content-Type'],
@@ -32,6 +53,7 @@ app.get("/", (req, res) => {
 require("./app/routes/product.routes")(app);
 require("./app/routes/user.routes")(app);
 require("./app/routes/order.routes")(app);
+require('./app/routes/auth.routes')(app);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;

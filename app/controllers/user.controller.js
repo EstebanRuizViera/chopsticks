@@ -1,13 +1,12 @@
 const db = require("../models");
 const User = db.users;
-const Op = db.Sequelize.Op;
 const jwt = require("jsonwebtoken");
-const config = require('../config/config')
+const config = require('../config/auth.config')
 
 // Create and Save a new User
 exports.create = (req, res) => {
     // Validate request
-    if (!req.body.name) {
+    if (!req.body.name ||!req.body.email ||!req.body.password ||!req.body.phone ) {
         res.status(400).send({
             message: "Content can not be empty!"
         });
@@ -132,6 +131,7 @@ exports.findAllUsers = (req, res) => {
 };
 
 exports.auth = (req, res) => {
+    
     User.findOne({ where: {email: req.body.email, password: req.body.password} })
         .then(data => {
             const payload = {
@@ -153,3 +153,20 @@ exports.auth = (req, res) => {
         });
 
   }
+
+
+  exports.allAccess = (req, res) => {
+    res.status(200).send("Public Content.");
+  };
+  
+  exports.userBoard = (req, res) => {
+    res.status(200).send("User Content.");
+  };
+  
+  exports.adminBoard = (req, res) => {
+    res.status(200).send("Admin Content.");
+  };
+  
+  exports.moderatorBoard = (req, res) => {
+    res.status(200).send("Moderator Content.");
+  };

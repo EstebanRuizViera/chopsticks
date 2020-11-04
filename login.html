@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>TusPalillos</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+    <script src="script/login.js"></script>
+    <link rel="stylesheet" href="style/login.css">
+</head>
+
+<body style="background-color: rgb(241, 233, 233);">
+    <!-- Navegación principal  -->
+    <div style="background-color: rgb(233, 222, 222);">
+        <div class="container py-3">
+            <h2><span>Tus Palillos</span></h2>
+        </div>
+    </div>
+
+    <!-- Navegación secundaria -->
+    <nav class="navbar navbar-expand-lg navbar-light nav-secundary" style="background-color: rgb(199, 192, 192);">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Inicio<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Perfil<span class="sr-only">(current)</span></a>
+                </li>
+
+            </ul>
+            <ul class="navbar-nav mr-auto align-items-right">
+                <li class="nav-item active align-items-right">
+                    <a class="nav-link" href="formulario.html">Comenzar<span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- BODY PAGE -->
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+            <!-- Tabs Titles -->
+
+            <!-- Icon -->
+            <div class="fadeIn first">
+                <img class="" src="img/user_icon.png" id="icon" alt="User Icon" />
+            </div>
+
+            <!-- Login Form -->
+            <form action="http://192.168.1.122:8080/api/auth/signin" method="POST" target="_top" autocomplete="on">
+                <input type="text" id="email" class="fadeIn second" name="email" placeholder="login">
+                <input type="text" id="password" class="fadeIn third" name="password" placeholder="password">
+                <input type="submit" class="fadeIn fourth" value="Log In">
+            </form>
+
+            <!-- Remind Passowrd -->
+            <div id="formFooter">
+                <a class="underlineHover" href="#">Forgot Password?</a>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

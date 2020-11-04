@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>TusPalillos</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+    <script src="script/formulario.js"></script>
+    <link rel="stylesheet" href="style/formulario.css">
+</head>
+
+<body style="background-color: rgb(241, 233, 233);">
+    <!-- Navegación principal  -->
+    <div style="background-color: rgb(233, 222, 222);">
+        <div class="container py-3">
+            <h2><span>Tus Palillos</span></h2>
+        </div>
+    </div>
+
+    <!-- Navegación secundaria -->
+    <nav class="navbar navbar-expand-lg navbar-light nav-secundary" style="background-color: rgb(199, 192, 192);">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Inicio<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Perfil<span class="sr-only">(current)</span></a>
+                </li>
+
+            </ul>
+            <ul class="navbar-nav mr-auto align-items-right">
+                <li class="nav-item active align-items-right">
+                    <a class="nav-link" href="formulario.html">Comenzar<span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- BODY PAGE -->
+    <div class="container py-5">
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <form id="regiration_form" action="http://192.168.1.119:8080/api/product/" method="post" autocomplete="on">
+            <fieldset>
+                <h2>Step 1: Add Personnel Details</h2>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Name" autofocus>
+                </div>
+                <div class="form-group">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" class="form-control" id="last-name" placeholder="Last Name">
+                </div>
+                <input type="button" name="password" class="next btn btn-info" value="Next" />
+            </fieldset>
+            <fieldset>
+                <h2> Step 2: Choose your chopstick</h2>
+                <div class="form-group">
+                    <input type="radio" id="type1" name="chopstick" value="type1">
+                    <label for="type1">Tipo 1</label><br>
+                    <input type="radio" id="type2" name="chopstick" value="type2">
+                    <label for="type2">Tipo 2</label><br>
+                    <input type="radio" id="type3" name="chopstick" value="type3">
+                    <label for="type3">Tipo 3</label>
+                </div>
+                <input type="button" name="previous" class="previous btn btn-default" value="Previous" />
+                <input type="button" name="next" class="next btn btn-info" value="Next" />
+            </fieldset>
+            <fieldset>
+                <h2>Step 3: Contact Information</h2>
+                <div class="form-group">
+                    <label for="mob">Mobile Number</label>
+                    <input type="text" class="form-control" id="mob" placeholder="Mobile Number">
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <textarea class="form-control" name="address" placeholder="Communication Address"></textarea>
+                </div>
+                <input type="button" name="previous" class="previous btn btn-default" value="Previous" />
+                <input type="submit" name="submit" class="submit btn btn-success" value="Submit" />
+            </fieldset>
+        </form>
+    </div>
+    <!-- FOOTER -->
+    <footer>
+        <div style="background-color: rgb(199, 192, 192);">
+            <div class="container">
+
+                <!-- Grid row-->
+                <div class="row py-4 d-flex align-items-center">
+
+                    <!-- Grid column -->
+                    <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+                        <h6 class="mb-0">Get connected with us on social networks!</h6>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-6 col-lg-7 text-center text-md-right">
+
+                        <!-- Facebook -->
+                        <a class="fb-ic">
+                            <i class="fab fa-facebook-f white-text mr-4"> </i>
+                        </a>
+                        <!-- Twitter -->
+                        <a class="tw-ic">
+                            <i class="fab fa-twitter white-text mr-4"> </i>
+                        </a>
+                        <!-- Google +-->
+                        <a class="gplus-ic">
+                            <i class="fab fa-google-plus-g white-text mr-4"> </i>
+                        </a>
+                        <!--Linkedin -->
+                        <a class="li-ic">
+                            <i class="fab fa-linkedin-in white-text mr-4"> </i>
+                        </a>
+                        <!--Instagram-->
+                        <a class="ins-ic">
+                            <i class="fab fa-instagram white-text"> </i>
+                        </a>
+
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Grid row-->
+
+            </div>
+        </div>
+
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left mt-5">
+
+            <!-- Grid row -->
+            <div class="row mt-3">
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+                    <!-- Content -->
+                    <h6 class="text-uppercase font-weight-bold">Company name</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                    <!-- Links -->
+                    <h6 class="text-uppercase font-weight-bold">Products</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <a href="#!">MDBootstrap</a>
+                    </p>
+                    <p>
+                        <a href="#!">MDWordPress</a>
+                    </p>
+                    <p>
+                        <a href="#!">BrandFlow</a>
+                    </p>
+                    <p>
+                        <a href="#!">Bootstrap Angular</a>
+                    </p>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                    <!-- Links -->
+                    <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <a href="#!">Your Account</a>
+                    </p>
+                    <p>
+                        <a href="#!">Become an Affiliate</a>
+                    </p>
+                    <p>
+                        <a href="#!">Shipping Rates</a>
+                    </p>
+                    <p>
+                        <a href="#!">Help</a>
+                    </p>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+                    <!-- Links -->
+                    <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+                    <p>
+                        <i class="fas fa-envelope mr-3"></i> info@example.com</p>
+                    <p>
+                        <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+                    <p>
+                        <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+        </div>
+        <!-- Footer Links -->
+
+        <!-- Copyright -->
+        <div class="text-center" style="background-color: rgb(199, 192, 192);">
+            © 2020 Copyright:
+            <a href="index.html"> tuspalillos.com</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+</body>
+
+</html>

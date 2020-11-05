@@ -16,16 +16,14 @@
     <link rel="stylesheet" href="style/login.css">
 </head>
 
-<body style="background-color: rgb(241, 233, 233);">
+<body>
     <!-- Navegación principal  -->
-    <div style="background-color: rgb(233, 222, 222);">
-        <div class="container py-3">
-            <h2><span>Tus Palillos</span></h2>
-        </div>
+    <div class="container py-3">
+        <h3 class="text-uppercase font-weight-bold">Tus Palillos</h3>
     </div>
 
     <!-- Navegación secundaria -->
-    <nav class="navbar navbar-expand-lg navbar-light nav-secundary" style="background-color: rgb(199, 192, 192);">
+    <nav class="navbar navbar-expand-lg navbar-light nav-secundary" style="background-color:  rgb(35, 160, 209);">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -59,14 +57,14 @@
 
             <!-- Login Form -->
             <form action="http://192.168.1.122:8080/api/auth/signin" method="POST" target="_top" autocomplete="on">
-                <input type="text" id="email" class="fadeIn second" name="email" placeholder="login">
-                <input type="text" id="password" class="fadeIn third" name="password" placeholder="password">
-                <input type="submit" class="fadeIn fourth" value="Log In">
+                <input type="text" id="email" class="fadeIn second" name="email" placeholder="Usuario">
+                <input type="text" id="password" class="fadeIn third" name="password" placeholder="Contraseña">
+                <input type="submit" class="fadeIn fourth" value="Iniciar sesión">
             </form>
 
             <!-- Remind Passowrd -->
             <div id="formFooter">
-                <a class="underlineHover" href="#">Forgot Password?</a>
+                <a class="underlineHover" href="#">¿Olvidaste la contraseña?</a>
             </div>
 
         </div>

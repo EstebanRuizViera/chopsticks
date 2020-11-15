@@ -5,13 +5,24 @@
     <title>TusPalillos</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- BOOTSTRAP -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+    <!-- FONTAWESOME -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
 
+    <!-- WOW-ANIMATED-CAROUSEL -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
+    <!-- FLICKITY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css">
+
+    <!-- MY-DOCUMENT -->
     <script src="script/login.js"></script>
     <link rel="stylesheet" href="style/login.css">
 </head>
@@ -23,25 +34,24 @@
     </div>
 
     <!-- Navegación secundaria -->
-    <nav class="navbar navbar-expand-lg navbar-light nav-secundary" style="background-color:  rgb(35, 160, 209);">
+    <nav class="navbar navbar-expand-lg navbar-light nav-secundary" style="background-color:  rgb(255, 106, 106);">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Inicio<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.html"><strong>Inicio</strong><span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Perfil<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="register.html"><strong>Perfil</strong><span class="sr-only">(current)</span></a>
                 </li>
+            </ul>
+            <span class="navbar-text">
+                <a class="nav-link" href="formulario.html"><strong>Comenzar </strong><span class="sr-only">(current)</span><span><i class="fas fa-chevron-right"></i></span></a>
 
-            </ul>
-            <ul class="navbar-nav mr-auto align-items-right">
-                <li class="nav-item active align-items-right">
-                    <a class="nav-link" href="formulario.html">Comenzar<span class="sr-only">(current)</span></a>
-                </li>
-            </ul>
+
+            </span>
         </div>
     </nav>
 
@@ -56,7 +66,7 @@
             </div>
 
             <!-- Login Form -->
-            <form action="http://192.168.1.122:8080/api/auth/signin" method="POST" target="_top" autocomplete="on">
+            <form action="http://192.168.0.155:8080/api/auth/signin" method="POST" target="_top" autocomplete="on">
                 <input type="text" id="email" class="fadeIn second" name="email" placeholder="Usuario">
                 <input type="text" id="password" class="fadeIn third" name="password" placeholder="Contraseña">
                 <input type="submit" class="fadeIn fourth" value="Iniciar sesión">

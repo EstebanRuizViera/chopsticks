@@ -5,15 +5,29 @@
     <title>TusPalillos</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- BOOTSTRAP -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+    <!-- FONTAWESOME -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
 
+    <!-- WOW-ANIMATED-CAROUSEL -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
+    <!-- FLICKITY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css">
+
+    <!-- MY-DOCUMENT -->
     <script src="script/script.js"></script>
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/carousel.css">
+    <link rel="stylesheet" href="style/product-slide.css">
+
 </head>
 
 <body>
@@ -23,51 +37,87 @@
     </div>
 
     <!-- Navegación secundaria -->
-    <nav class="navbar navbar-expand-lg navbar-light nav-secundary" style="background-color:  rgb(35, 160, 209);">
+    <nav class="navbar navbar-expand-lg navbar-light nav-secundary" style="background-color:  rgb(255, 106, 106);">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Inicio<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.html"><strong>Inicio</strong><span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Perfil<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="register.html"><strong>Perfil</strong><span class="sr-only">(current)</span></a>
                 </li>
             </ul>
-            <ul class="navbar-nav mr-auto align-items-right">
-                <li class="nav-item active align-items-right">
-                    <a class="nav-link" href="formulario.html">Comenzar<span class="sr-only">(current)</span></a>
-                </li>
-            </ul>
+            <span class="navbar-text ">
+                <a class="nav-link" href="formulario.html">
+                    <strong>Comenzar</strong>
+            <i class="fas fa-chevron-right"></i>
+            </a>
+            </span>
         </div>
     </nav>
 
     <!-- CAROUSEL -->
-
-    <div class="container carousel slide carousel-fade py-3" data-ride="carousel">
+    <div id="myCarousel" class="container carousel slide carousel-fade" data-ride="carousel" style="margin-top: 10px;">
         <ol class="carousel-indicators">
-            <li data-target="#carrousel-principal" data-slide-to="0" class="active"></li>
-            <li data-target="#carrousel-principal" data-slide-to="1"></li>
-            <li data-target="#carrousel-principal" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="img/carrousel1.jpg" class="d-block w-100 img-carrousel" alt="...">
+                <div class="mask flex-center">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-7 col-12 order-md-1 order-2">
+                                <h4>Present your <br> awesome product</h4>
+                                <p>Lorem ipsum dolor sit amet. Reprehenderit, qui blanditiis quidem rerum <br> necessitatibus praesentium voluptatum deleniti atque corrupti.</p>
+                                <a href="#">BUY NOW</a> </div>
+                            <div class="col-md-5 col-12 order-md-2 order-1">
+                                <img src="img/type1.jpeg" class="mx-auto" alt="slide">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="carousel-item">
-                <img src="img/carrousel2.jpg" class="d-block w-100 img-carrousel" alt="...">
+                <div class="mask flex-center">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-7 col-12 order-md-1 order-2">
+                                <h4>Present your <br> awesome product</h4>
+                                <p>Lorem ipsum dolor sit amet. Reprehenderit, qui blanditiis quidem rerum <br> necessitatibus praesentium voluptatum deleniti atque corrupti.</p>
+                                <a href="#">BUY NOW</a> </div>
+                            <div class="col-md-5 col-12 order-md-2 order-1">
+                                <img src="img/type2.jpeg" class="mx-auto" alt="slide">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="carousel-item">
-                <img src="img/carrousel3.jpg" class="d-block w-100 img-carrousel" alt="...">
+                <div class="mask flex-center">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-7 col-12 order-md-1 order-2">
+                                <h4>Present your <br> awesome product</h4>
+                                <p>Lorem ipsum dolor sit amet. Reprehenderit, qui blanditiis quidem rerum <br> necessitatibus praesentium voluptatum deleniti atque corrupti.</p>
+                                <a href="#">BUY NOW</a> </div>
+                            <div class="col-md-5 col-12 order-md-2 order-1">
+                                <img src="img/type3.jpeg" class="mx-auto" alt="slide">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <a class="carousel-control-prev" href="#carrousel-principal" role="button" data-slide="prev">
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
         </a>
-        <a class="carousel-control-next" href="#carrousel-principal" role="button" data-slide="next">
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
@@ -80,7 +130,7 @@
 
         <div class="row">
             <div class="col-md-8 col-sm-8 col-xs-12">
-                <p>parrafo que contenga descripción del objetivo/idea general de la pagina</p>
+                <p>Parrafo que contenga descripción del objetivo/idea general de la pagina</p>
             </div>
             <div class="col-md-4 col-sm-4">
                 <img src="img/carrousel1.jpg" class="d-block w-100 img-carrousel" alt="...">
@@ -206,7 +256,7 @@
         <!-- Footer Links -->
 
         <!-- Copyright -->
-        <div class="text-center" style="background-color:  rgb(35, 160, 209);">
+        <div class="text-center" style="background-color:  rgb(255, 106, 106);">
             © 2020 Copyright:
             <a href="index.html">tuspalillos.com</a>
         </div>
